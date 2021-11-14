@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 
+        <title>New page</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="style.css" rel="stylesheet">
+		<script>
+     function getRate(obj){
+      if(document.getElementById('option_2').checked) {
+		  document.getElementById('ifHiring').style.visibility = 'visible';
+	  }
+		 else {
+			 document.getElementById('ifHiring').style.visibility = 'hidden';
+		 }
+   }
+	function checkzipCode(obj) {
+		var text = document.getElementById('zipcode').value;
+		exp = /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ ]?\d[ABCEGHJ-NPRSTV-Z]\d$/i;
+		if(!exp.test(text))
+			alert("Invalid postal code.");
+	}
+			function validateForm() {
+				var a = document.getElementById('name').value;
+				var b = document.getElementById('email').value;
+				var c = document.getElementById('add').value;
+				var d = document.getElementById('zipcode').value;
+				var e = document.getElementById('city').value;
+				var f = document.getElementsByName('option').value;
+				if( a == "" || b == "" || c=="" || d == "" || e=="" || f=="")
+					{
+						alert("One or more columns missing");
+					}
+			}
+   </script>
+    </head>
+    <body>
+        <div class="container-fluid one" style="display: flex; justify-content: center; align-items: center; height: 100vh overflow: auto;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="photo.jpg"  class="img-fluid img-thumbnail" alt="..." width="250" height="250">
+                    <h2>Kaveh Aghadavoodi</h2>  
+                    <p >Web Developer, Software Engineer</p>
+                    <a class="btn btn-first" href="#">Resume</a>
+                    <a class="btn btn-second" href="#form">Contact Us</a>
+					<br>
+                </div>
+            </div>
+        </div>        
+        <div class="container-fluid two" 
+			 style="display: flex; justify-content: center; align-items: center; height: 100vh; border:2px solid #cecece;overflow: auto">
+            <section>
+                <div class="row justify-content-center">                    
+                    <div class="col-md-6 col-sm-6">                        
+                        <h2>About me and Academic Honesty</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id lacinia nulla, sit amet pretium neque. Quisque cursus venenatis lectus, et hendrerit ex pellentesque ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum est mi, ultricies et augue in, rhoncus dapibus metus. Cras porttitor augue ac tortor varius, id fringilla massa ornare. Etiam ultrices vitae purus sed efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vitae urna sollicitudin, feugiat ex a, pharetra urna. Nullam diam elit, bibendum eget diam ut, dignissim imperdiet diam. Vestibulum in velit tellus. Quisque non lacus ex. Nullam interdum viverra est pharetra facilisis. Curabitur quis nisl eget massa ultrices venenatis.</p>
+                        <p><strong>Date:</strong> 9-11-2021</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 justify-content: right; align-items: right">
+                        <h2>Basic Information</h2>
+                        <table class="table">
+                            <tr>
+                                <td><strong>AGE</strong></td>
+                                <td>23</td> 
+                            </tr>
+                            <tr>
+                                <td><strong>EMAIL</strong></td>
+                                <td>500</td> 
+                            </tr>
+                            <tr>
+                                <td><strong>LANGUAGE</strong></td>
+                                <td>500</td> 
+                            </tr>
+                            <tr>
+                                <td><strong>SECTION</strong></td>
+                                <td>500</td> 
+                            </tr>
+                            <tr>
+                                <td><strong>STUDENT ID</strong></td>
+                                <td>500</td> 
+                            </tr>
+                            <tr>
+                                <td><strong>INSTRUCTOR</strong></td>
+                                <td>500</td> 
+                            </tr>
+                        </table>
+                    </div>
+                </div>            
+				<section>
+            <div class="container-fluid three" >
+            <div class="year">
+                <p>2020-2014 (expected)</p>
+                <h3>Bachelor's Degree</h3>
+            </div> 
+            <div class="degree">
+                <h4>Bachelor's Degree</h4>
+                <h6>Seneca College</h6>
+                <br>
+                <p>Under the supervision of Professor X.</p>
+            </div>
+        </div>        
+        </section>
+          </section>
+        </div>        
+	<section>
+		<div class="container-fliud four" id="form"
+			 style="display: flex; justify-content: center; align-items: center; text-align: center; height: 100vh; border:2px solid #cecece;">
+		  <form  action="https://httpbin.org/post" method="post" onSubmit="return validateForm()">
+				<label>Name<br><input type="text" id="name"></label>
+				<br>
+				<label>Email Address<br><input type="email" id="email"></label>
+				<br>
+				<label>Address<br><input type="text" id="add"></label>
+				<br>
+				<label>City</label><br>
+				<input list="cities" name="cities" id="city">
+				<datalist id="cities">
+					<option value="Quebec"></option>
+					<option value="Toronto"></option>
+					<option value="Vancouver"></option>
+					<option value="Edmonton"></option>
+					<option value="Montréal"></option>
+					<option value="Calgary"></option>
+					<option value="Winnipeg"></option>
+					<option value="Ottawa"></option>
+			  </datalist>
+				<br>
+				<label>Postal Code </label><br>
+				<input type="text" id="zipcode" maxlength="7" onChange="checkzipCode(this)">
+				<br>
+			  <label>Choose</label>
+			<p>
+				  <label>
+				    <input type="radio" name="option" value="Question" id="option_0">
+				    Question</label>
+				  <br>
+				  <label>
+				    <input type="radio" name="option" value="Comment" id="option_1" onClick="getRate(this);">
+				    Comment</label>
+				  <br>
+				  <label>
+				    <input type="radio" name="option" value="Hiring" id="option_2" onClick="getRate(this);">
+				    Hiring</label>
+				  <br>
+			<div id="ifHiring" style="visibility: hidden">
+			  			<label>Enter Hourly Rate: <input type="number" id="hourlyRate" name="rate"></label>					
+	  		</div>
+	  		<textarea rows="5" cols="50" id="textarea"></textarea>
+			  <br>
+			  		<label>Do you want to subscribe to newsletter? </label>
+			  		<p>
+			  		  <label>
+			  		    <input type="checkbox" name="subscribe" value="yes" id="subscribe_0">
+			  		    Yes</label>
+			  		  <br>
+			  		  <label>
+			  		    <input type="checkbox" name="subscribe" value="no" id="subscribe_1">
+			  		    No</label>
+			  		  <br>
+  		    </p>
+		    </p>
+			<input type="submit"><input type="reset">
+          </form>	
+		</div>
+	</section>
+    </body>
+</html>
